@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FileText } from "lucide-react";
 
-
 export default function Header() {
 	const location = useLocation();
 
@@ -19,20 +18,10 @@ export default function Header() {
 					</div>
 					<nav className="flex gap-1">
 						<Button
-							variant={
-								location.pathname === "/"
-									? "secondary"
-									: "ghost"
-							}
-							size="sm"
-							asChild>
-							<Link to="/">Editor</Link>
-						</Button>
-						<Button
-							variant={
+							className={
 								location.pathname === "/error-test"
-									? "secondary"
-									: "ghost"
+									? "bg-red-400 hover:bg-red-500 text-white"
+									: "bg-red-200 hover:bg-red-300 text-red-900"
 							}
 							size="sm"
 							asChild>

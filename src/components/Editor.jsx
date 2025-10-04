@@ -43,7 +43,7 @@ function Editor({ markdown, onMarkdownChange }) {
 					<CardTitle className="text-lg">Editor</CardTitle>
 					<div className="flex gap-2">
 						<Button
-							variant="outline"
+							className="bg-green-600 hover:bg-green-700 text-white"
 							size="sm"
 							onClick={() =>
 								document.getElementById("file-upload").click()
@@ -52,7 +52,7 @@ function Editor({ markdown, onMarkdownChange }) {
 							Upload
 						</Button>
 						<Button
-							variant="outline"
+							className="bg-cyan-600 hover:bg-cyan-700 text-white"
 							size="sm"
 							onClick={handleDownload}>
 							<Download className="w-4 h-4 mr-1" />
@@ -81,6 +81,4 @@ function Editor({ markdown, onMarkdownChange }) {
 	);
 }
 
-export default Editor; // Don't forget to export default
-
-
+export default Editor;
