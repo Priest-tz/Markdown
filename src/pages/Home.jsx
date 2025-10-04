@@ -1,8 +1,37 @@
 import { useState } from "react";
 import Editor from "../components/Editor";
 import Preview from "../components/Preview";
-import useLocalStorage from "../hooks/useLocalStorage";
-import { defaultMarkdown } from "../utils/markdownParser";
+
+// Default markdown content
+const defaultMarkdown = `# Welcome to Opon!
+
+This is your **Opon**, your board for writing clear code, a space where ideas take shape and symbols find meaning.
+
+Opon is an open-source Markdown editor inspired by the Yoruba word **Ọ̀pọ́n**, the sacred board used for interpretation and learning.
+
+## Try it out:
+- Write a few lines of Markdown
+- Add a code block and watch it render live
+- Save, upload, download and share your work
+
+### Example Code Block:
+\`\`\`javascript
+function greeting() {
+  console.log("Hello from Opon!");
+}
+\`\`\`
+
+### Features:
+- **Live Preview**: See your markdown rendered in real-time
+- **Code Syntax Highlighting**: Beautiful code formatting
+- **Persistent Storage**: Your work is automatically saved
+- **Export Options**: Download and share your markdown files
+
+> "Every idea begins on a clean surface (Opon)." - Traditional Wisdom
+
+---
+
+*Start writing your markdown on the left and see the rendered result on the right!*`;
 
 function Home() {
 	const [markdown, setMarkdown] = useState(() => {
